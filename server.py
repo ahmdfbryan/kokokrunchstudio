@@ -149,7 +149,7 @@ def init_db():
         cur.execute("UPDATE payments SET payment_type=CASE WHEN lower(name) LIKE '%qris%' THEN 'qris' WHEN lower(name) LIKE '%dana%' OR lower(name) LIKE '%ovo%' OR lower(name) LIKE '%gopay%' OR lower(name) LIKE '%shopee%' OR lower(name) LIKE '%linkaja%' THEN 'wallet' ELSE 'bank' END")
 
     if cur.execute('SELECT COUNT(*) c FROM users').fetchone()['c']==0:
-        cur.execute('INSERT INTO users(name,username,password_hash,role) VALUES(?,?,?,?)',('Owner KokoKrunch','admin',hash_pw('GantiPassword123!'),'Owner'))
+        cur.execute('INSERT INTO users(name,username,password_hash,role) VALUES(?,?,?,?)',('Owner KokoKrunch','admin',hash_pw('admin'),'Owner'))
     if cur.execute('SELECT COUNT(*) c FROM services').fetchone()['c']==0:
         services=[
           ('robux','Robux (Estimasi 5 Hari)','Robux 5 Hari','💎','Hemat','Metode resmi lewat Group Payout. Harga lebih hemat, cocok buat kamu yang tidak buru-buru.','Maks. 5 hari kerja','mint',1,1),
@@ -457,7 +457,7 @@ class Handler(SimpleHTTPRequestHandler):
         return super().do_GET()
 
 if __name__=='__main__':
-    init_db(); print('KokoKrunch CMS v2.1: http://localhost:8000'); print('Admin awal: admin / GantiPassword123!'); ThreadingHTTPServer(('0.0.0.0',8000),Handler).serve_forever()
+    init_db(); print('KokoKrunch CMS v2.1: http://localhost:8000'); print('Admin awal: admin / admin'); ThreadingHTTPServer(('0.0.0.0',8000),Handler).serve_forever()
 
 import os
 
