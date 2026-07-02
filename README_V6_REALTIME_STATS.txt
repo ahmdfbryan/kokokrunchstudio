@@ -1,1 +1,0 @@
-Versi V6: Statistik homepage/Live Crunch Counter sekarang memakai angka asli dari database dashboard tanpa baseline 982.450/2.456. Data refresh otomatis setiap 5 detik di homepage. Angka bertambah setelah pesanan diubah statusnya menjadi Terkirim.

@@ -1,1 +1,0 @@
-V15: tombol Edit nominal dibuat lebih jelas, fungsi edit dipastikan global, dan menu Nominal Robux dipindah di atas Tim pada sidebar dashboard. Staff tetap tidak bisa mengakses pengaturan nominal/tim.
