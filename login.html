@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login — KokoKrunch Studio</title>
+<link rel="icon" type="image/webp" href="https://tr.rbxcdn.com/180DAY-19accf77fc7ea9c95df84278ce0e3de0/150/150/Image/Webp/noFilter">
+<link rel="apple-touch-icon" href="https://tr.rbxcdn.com/180DAY-19accf77fc7ea9c95df84278ce0e3de0/150/150/Image/Webp/noFilter">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css?v=36">
+</head>
+<body>
+<div class="nav">
+<div class="nav-inner">
+<div class="brand" onclick="location.href='index.html'">
+<div class="brand-mark"><img src="https://tr.rbxcdn.com/180DAY-19accf77fc7ea9c95df84278ce0e3de0/150/150/Image/Webp/noFilter" alt="KokoKrunch Studio"></div>
+<div class="brand-name">KokoKrunch <span>Studio</span></div>
+</div>
+<div class="nav-links">
+<a href="/index.html">Beranda</a>
+<a href="/layanan.html">Layanan</a>
+<a href="/cek-pesanan.html">Cek Pesanan</a>
+<a href="index.html#faq">FAQ</a>
+</div>
+<div class="nav-cta">
+<button class="btn btn-ghost btn-sm" type="button" onclick="goLogin()">Masuk</button>
+<button class="btn btn-gold btn-sm" data-link="/layanan.html">Top Up Sekarang</button>
+<button class="nav-burger" type="button" aria-label="Buka menu" aria-expanded="false" onclick="toggleMobileMenu(event)">☰</button>
+</div>
+</div>
+</div>
+<div class="view active" id="view-login">
+<div class="wrap">
+<div class="login-wrap">
+<div class="brand"><div class="brand-mark"><img src="https://tr.rbxcdn.com/180DAY-19accf77fc7ea9c95df84278ce0e3de0/150/150/Image/Webp/noFilter" alt="KokoKrunch Studio"></div><div class="brand-name">KokoKrunch <span>Studio</span></div></div>
+<h2 style="font-size:18px; text-align:center; margin-bottom:22px;">Masuk ke Dashboard</h2>
+<div class="form-err" id="loginErr"></div>
+<div class="field">
+<label for="loginUser">Username</label>
+<input id="loginUser" placeholder="username tim" type="text"/>
+</div>
+<div class="field">
+<label for="loginPass">Password</label>
+<input id="loginPass" placeholder="••••••••" type="password"/>
+</div>
+<button class="btn btn-gold btn-block" onclick="doLogin()">Masuk</button>
+
+<div style="text-align:center; margin-top:16px;">
+<a href="/index.html" style="font-size:12.5px; color:var(--text-faint);">← Kembali ke Beranda</a>
+</div>
+</div>
+</div>
+</div>
+<footer id="siteFooter">
+<div class="wrap">
+<div class="footer-grid">
+<div class="footer-col">
+<div class="brand" style="margin-bottom:14px;"><div class="brand-mark"><img src="https://tr.rbxcdn.com/180DAY-19accf77fc7ea9c95df84278ce0e3de0/150/150/Image/Webp/noFilter" alt="KokoKrunch Studio"></div><div class="brand-name">KokoKrunch <span>Studio</span></div></div>
+<p>Toko top up Robux &amp; Gamepass, dikelola langsung oleh developer komunitas KokoKrunch Studios.</p>
+</div>
+<div class="footer-col">
+<h4>Navigasi</h4>
+<a href="/index.html">Beranda</a>
+<a href="/layanan.html">Layanan</a>
+<a href="/cek-pesanan.html">Cek Pesanan</a>
+<a href="/login.html">Masuk</a>
+</div>
+<div class="footer-col">
+<h4>Layanan</h4>
+<a href="order.html?type=robux">Robux 5 Hari</a>
+<a href="order.html?type=gamepass">Gamepass Instan</a>
+<a href="https://www.roblox.com/id/communities/625247444/KokoKrunch-Studios#!/about" rel="noopener" target="_blank">Komunitas Roblox ↗</a>
+</div>
+<div class="footer-col">
+<h4>Kontak</h4>
+<a href="https://discord.gg/kokokrunch" rel="noopener" target="_blank">Discord Admin</a>
+<p>Layanan pelanggan setiap hari</p>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 KokoKrunch Studio. Bukan produk atau afiliasi resmi Roblox Corporation.</span>
+<span>Dibuat dengan 🍪 untuk komunitas Roblox Indonesia</span>
+</div>
+</div>
+</footer>
+<div class="toast" id="toast"></div>
+<div class="modal-bg" id="proofModalBg" onclick="if(event.target===this) closeProofModal()">
+<div class="modal">
+<button class="modal-close" onclick="closeProofModal()">✕</button>
+<h3>Bukti Pembayaran</h3>
+<img alt="Bukti pembayaran" id="proofModalImg" src=""/>
+<div id="proofModalMeta" style="font-size:12.5px; color:var(--text-muted);"></div>
+</div>
+</div>
+<script src="assets/app.js?v=36"></script>
+</body>
+</html>
